@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build a Project</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0d0d0d;
+    color: #f5f5f5;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 24px;
+  }
+  h1 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 40px;
+  }
+  #display {
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: bold;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  #category {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #97EE23;
+    min-height: 20px;
+    margin-bottom: 40px;
+  }
+  button {
+    background: #97EE23;
+    color: #0d0d0d;
+    border: none;
+    padding: 18px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: transform 0.1s ease;
+  }
+  button:hover { transform: scale(1.03); }
+  button:active { transform: scale(0.97); }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+  #history {
+    margin-top: 50px;
+    font-size: 12px;
+    opacity: 0.4;
+    max-width: 700px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Build a Project</h1>
+<div id="display">Clique pour tirer une idée</div>
+<div id="category"></div>
+<button id="btn">Build a project</button>
+<div id="history"></div>
+
+<script>
+const IDEAS = [
+  ["Plombier indépendant", "Artisan / BTP"],
+  ["Électricien du bâtiment", "Artisan / BTP"],
+  ["Menuisier sur mesure", "Artisan / BTP"],
+  ["Entreprise de rénovation énergétique", "Artisan / BTP"],
+  ["Paysagiste / entretien de jardins", "Artisan / BTP"],
+  ["Couvreur zingueur", "Artisan / BTP"],
+  ["Peintre en bâtiment", "Artisan / BTP"],
+  ["Agence immobilière locale", "Immobilier"],
+  ["Chasseur d'appartement", "Immobilier"],
+  ["Gestion de locations courte durée (conciergerie Airbnb)", "Immobilier"],
+  ["Diagnostiqueur immobilier", "Immobilier"],
+  ["Cabinet d'avocats en droit des affaires", "Services pro"],
+  ["Expert-comptable indépendant", "Services pro"],
+  ["Cabinet de recrutement", "Services pro"],
+  ["Consultant en stratégie RH", "Services pro"],
+  ["Notaire", "Services pro"],
+  ["Coach sportif à domicile", "Santé & bien-être"],
+  ["Cabinet d'ostéopathie", "Santé & bien-être"],
+  ["Studio de yoga / pilates", "Santé & bien-être"],
+  ["Nutritionniste diététicien", "Santé & bien-être"],
+  ["Spa / institut de massage", "Santé & bien-être"],
+  ["Cabinet dentaire", "Santé & bien-être"],
+  ["Restaurant gastronomique", "Restauration"],
+  ["Food truck spécialisé burgers", "Restauration"],
+  ["Boulangerie artisanale", "Restauration"],
+  ["Restaurant japonais / sushi", "Restauration"],
+  ["Traiteur événementiel", "Restauration"],
+  ["Torréfacteur de café indépendant", "Restauration"],
+  ["Atelier de couture / retouches", "Artisanat & mode"],
+  ["Bijoutier créateur", "Artisanat & mode"],
+  ["Cordonnier réparateur", "Artisanat & mode"],
+  ["Marque de vêtements streetwear", "Artisanat & mode"],
+  ["Fleuriste", "Artisanat & mode"],
+  ["Atelier de poterie / céramique", "Artisanat & mode"],
+  ["Garage automobile indépendant", "Automobile"],
+  ["Concessionnaire de voitures de collection", "Automobile"],
+  ["Détailing automobile / lavage premium", "Automobile"],
+  ["Loueur de véhicules utilitaires", "Automobile"],
+  ["École de conduite", "Automobile"],
+  ["Cabinet de conseil en cybersécurité", "Tech & digital"],
+  ["Studio de développement web freelance", "Tech & digital"],
+  ["Agence de gestion de réseaux sociaux", "Tech & digital"],
+  ["SaaS de gestion de stock pour petits commerces", "Tech & digital"],
+  ["École de code en ligne", "Tech & digital"],
+  ["Architecte d'intérieur", "Design & créatif"],
+  ["Studio de photographie de mariage", "Design & créatif"],
+  ["Graphiste freelance / branding", "Design & créatif"],
+  ["Vidéaste corporate", "Design & créatif"],
+  ["Studio d'enregistrement musical", "Design & créatif"],
+  ["Salle d'escalade indoor", "Sport & loisirs"],
+  ["Club de tennis privé", "Sport & loisirs"],
+  ["École de surf", "Sport & loisirs"],
+  ["Salle de sport premium / boutique fitness", "Sport & loisirs"],
+  ["Club de plongée", "Sport & loisirs"],
+  ["Vignoble / domaine viticole", "Terroir & agriculture"],
+  ["Ferme bio en circuit court", "Terroir & agriculture"],
+  ["Brasserie artisanale", "Terroir & agriculture"],
+  ["Miellerie / apiculteur", "Terroir & agriculture"],
+  ["Crèche privée", "Famille & éducation"],
+  ["Centre de soutien scolaire", "Famille & éducation"],
+  ["École de musique pour enfants", "Famille & éducation"],
+  ["Agence de voyage sur mesure", "Voyage & événementiel"],
+  ["Organisateur de mariages", "Voyage & événementiel"],
+  ["Camping / hébergement insolite", "Voyage & événementiel"],
+  ["Salon de coiffure haut de gamme", "Beauté"],
+  ["Institut de beauté / esthétique", "Beauté"],
+  ["Barbier traditionnel", "Beauté"],
+  ["Vétérinaire", "Animaux"],
+  ["Toiletteur canin", "Animaux"],
+  ["Pension pour animaux", "Animaux"],
+  ["Serrurier dépanneur 24/7", "Dépannage & sécurité"],
+  ["Société de sécurité privée / vidéosurveillance", "Dépannage & sécurité"],
+  ["Déménageur professionnel", "Dépannage & sécurité"]
+];
+
+const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&";
+const display = document.getElementById('display');
+const category = document.getElementById('category');
+const historyEl = document.getElementById('history');
+const btn = document.getElementById('btn');
+let picks = [];
+
+function randomScramble(length) {
+  let s = '';
+  for (let i = 0; i < length; i++) s += scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+  return s;
+}
+
+function build() {
+  btn.disabled = true;
+  category.textContent = '';
+  const final = IDEAS[Math.floor(Math.random() * IDEAS.length)];
+  const finalText = final[0];
+  const duration = 900; // ms
+  const interval = 40;
+  let elapsed = 0;
+
+  const timer = setInterval(() => {
+    elapsed += interval;
+    const progress = elapsed / duration;
+    // reveal letters progressively from left to right toward the end
+    const revealCount = Math.floor(progress * finalText.length);
+    let out = '';
+    for (let i = 0; i < finalText.length; i++) {
+      if (finalText[i] === ' ') { out += ' '; continue; }
+      out += i < revealCount ? finalText[i] : scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+    }
+    display.textContent = out;
+
+    if (elapsed >= duration) {
+      clearInterval(timer);
+      display.textContent = finalText;
+      category.textContent = final[1];
+      picks.unshift(final[0]);
+      picks = picks.slice(0, 5);
+      historyEl.textContent = picks.length ? "Précédents : " + picks.slice(1).join(" · ") : '';
+      btn.disabled = false;
+    }
+  }, interval);
+}
+
+btn.addEventListener('click', build);
+</script>
+
+</body>
+</html>
