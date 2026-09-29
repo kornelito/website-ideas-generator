@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construct Corp — Rénovation à Lyon et son agglomération</title>
+<meta name="description" content="Construct Corp rénove salles de bain, cuisines, extensions et façades à Lyon et dans son agglomération depuis 2009. Devis fixe, un seul interlocuteur, chantier tenu.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <a href="#home" class="logo">
+    <svg class="mark" viewBox="0 0 34 34" fill="none">
+      <rect width="34" height="34" rx="9"/>
+      <path d="M10 24V10h7" stroke="#14110d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M18 24h7v-8" stroke="#14110d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Construct Corp
+  </a>
+
+  <nav class="main-nav" id="mainNav">
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Réalisations</a>
+      <a href="#reviews">Avis clients</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary">
+        Demander un devis
+        <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">Rénovation · Lyon &amp; agglomération</span>
+        <h1>
+          <span class="line"><span>Le chantier,</span></span>
+          <span class="line"><span>sans les</span></span>
+          <span class="line"><span style="color:var(--orange)">mauvaises surprises.</span></span>
+        </h1>
+        <p class="sub">Construct Corp rénove salles de bain, cuisines, extensions et façades à Lyon, Villeurbanne, Caluire et dans dix communes de l'agglomération. Devis fixe, un seul interlocuteur du premier rendez-vous à la réception des clés, et dix-sept ans de chantiers qui vont jusqu'au bout.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">
+            Obtenir mon devis
+            <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#work" class="btn btn-ghost">Voir nos chantiers</a>
+        </div>
+        <div class="hero-meta">
+          <div class="item"><strong>17 ans</strong><span>D'expérience de chantier</span></div>
+          <div class="item"><strong>420+</strong><span>Chantiers livrés</span></div>
+          <div class="item"><strong>18</strong><span>Compagnons salariés</span></div>
+          <div class="item"><strong>0</strong><span>Chantier abandonné</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="blueprint-card">
+          <div class="tag-row">
+            <span>Plan — élévation type <span class="dot">●</span> éch. 1:50</span>
+            <span>CC — 2026</span>
+          </div>
+          <svg id="heroSvg" viewBox="0 0 520 400" width="100%" role="img" aria-label="Coupe illustrée d'une maison montrant salle de bain, cuisine, combles et extension">
+            <defs>
+              <pattern id="heroDots" width="24" height="24" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="1.3" fill="var(--navy)" fill-opacity="0.14"/>
+              </pattern>
+              <pattern id="heroHatch" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="8" stroke="var(--navy)" stroke-width="1.4" stroke-opacity="0.35"/>
+              </pattern>
+            </defs>
+
+            <rect width="520" height="400" fill="var(--paper)"/>
+            <rect width="520" height="400" fill="url(#heroDots)"/>
+
+            <g stroke="var(--black)" stroke-opacity="0.35" fill="none" stroke-width="1.4">
+              <path d="M20 34V16H38"/>
+              <path d="M482 16H500V34"/>
+              <path d="M500 366V384H482"/>
+              <path d="M38 384H20V366"/>
+            </g>
+
+            <!-- facade insulation band -->
+            <rect x="128" y="150" width="22" height="200" fill="url(#heroHatch)" stroke="var(--navy)" stroke-width="1.2" class="cc-fill"/>
+
+            <!-- ground -->
+            <line x1="60" y1="350" x2="460" y2="350" stroke="var(--black)" stroke-width="2" class="cc-draw"/>
+
+            <!-- main volume -->
+            <path class="cc-draw" d="M150 350V150L260 62L370 150V350" fill="none" stroke="var(--black)" stroke-width="2"/>
+            <line class="cc-draw" x1="150" y1="252" x2="370" y2="252" stroke="var(--black)" stroke-width="1.6"/>
+
+            <!-- dormer / combles -->
+            <path class="cc-draw" d="M296 150V104L322 84L348 104V150" fill="none" stroke="var(--black)" stroke-width="1.6"/>
+            <rect x="308" y="118" width="28" height="32" fill="var(--orange)" fill-opacity="0.14" stroke="var(--orange-deep)" stroke-width="1.3" class="cc-fill"/>
+
+            <!-- kitchen -->
+            <line x1="150" y1="330" x2="260" y2="330" stroke="var(--black)" stroke-width="1.6" class="cc-draw"/>
+            <circle class="cc-fill" cx="178" cy="314" r="6" fill="var(--orange)" fill-opacity="0.5" stroke="var(--orange-deep)" stroke-width="1.2"/>
+            <circle class="cc-fill" cx="204" cy="314" r="6" fill="var(--orange)" fill-opacity="0.5" stroke="var(--orange-deep)" stroke-width="1.2"/>
+            <circle class="cc-fill" cx="230" cy="314" r="6" fill="var(--orange)" fill-opacity="0.5" stroke="var(--orange-deep)" stroke-width="1.2"/>
+            <line x1="178" y1="330" x2="178" y2="350" stroke="var(--black)" stroke-width="1.2" class="cc-draw"/>
+            <line x1="204" y1="330" x2="204" y2="350" stroke="var(--black)" stroke-width="1.2" class="cc-draw"/>
+            <line x1="230" y1="330" x2="230" y2="350" stroke="var(--black)" stroke-width="1.2" class="cc-draw"/>
+
+            <!-- bathroom -->
+            <rect class="cc-fill" x="278" y="308" width="76" height="34" rx="10" fill="var(--orange)" fill-opacity="0.14" stroke="var(--orange-deep)" stroke-width="1.4"/>
+            <circle class="cc-draw" cx="340" cy="266" r="6" fill="none" stroke="var(--black)" stroke-width="1.4"/>
+            <line class="cc-draw" x1="340" y1="272" x2="340" y2="286" stroke="var(--black)" stroke-width="1.3"/>
+            <g class="cc-fill" stroke="var(--navy)" stroke-width="1.3">
+              <line x1="332" y1="290" x2="327" y2="298"/>
+              <line x1="340" y1="292" x2="340" y2="300"/>
+              <line x1="348" y1="290" x2="353" y2="298"/>
+            </g>
+            <rect class="cc-draw" x="266" y="256" width="98" height="90" fill="none" stroke="var(--orange-deep)" stroke-width="1.4" stroke-dasharray="6 5"/>
+
+            <!-- extension -->
+            <path class="cc-draw" d="M370 264H452V350H370" fill="none" stroke="var(--black)" stroke-width="1.8"/>
+            <g class="cc-fill" stroke="var(--navy)" stroke-width="1.2" fill="var(--navy)" fill-opacity="0.06">
+              <rect x="384" y="280" width="26" height="24"/>
+              <rect x="414" y="280" width="26" height="24"/>
+              <rect x="384" y="308" width="26" height="24"/>
+              <rect x="414" y="308" width="26" height="24"/>
+            </g>
+
+            <!-- dimension -->
+            <g class="cc-fill" stroke="var(--black)" stroke-opacity="0.55" stroke-width="1.2">
+              <line x1="150" y1="366" x2="150" y2="374"/>
+              <line x1="452" y1="366" x2="452" y2="374"/>
+              <line x1="150" y1="370" x2="452" y2="370"/>
+            </g>
+            <text x="301" y="366" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--black)" fill-opacity="0.6" class="cc-fill">9,60 M — FAÇADE SUD</text>
+          </svg>
+          <div class="tag-row" style="margin-top:14px;margin-bottom:0;">
+            <span>Réf. CC‑2026‑000</span>
+            <span>Salle de bain <span class="dot">●</span> Cuisine <span class="dot">●</span> Combles <span class="dot">●</span> Extension</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Devis fixe, jamais révisé à la hausse sans avenant</span>
+      <span>17 ans de chantiers à Lyon et son agglomération</span>
+      <span>Compagnons salariés, aucune sous-traitance en cascade</span>
+      <span>0 chantier laissé en plan depuis 2009</span>
+      <span>Devis fixe, jamais révisé à la hausse sans avenant</span>
+      <span>17 ans de chantiers à Lyon et son agglomération</span>
+      <span>Compagnons salariés, aucune sous-traitance en cascade</span>
+      <span>0 chantier laissé en plan depuis 2009</span>
+    </div>
+  </div>
+
+  <!-- ============ GUARANTEES ============ -->
+  <section id="guarantees">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Ce qu'on garantit</span>
+          <h2 style="margin-top:14px;">Quatre règles qu'on ne casse pas</h2>
+        </div>
+        <p class="lede">Le reste d'un chantier de rénovation — les finitions, les délais, les détails — ça se discute au cas par cas. Ces quatre-là, non.</p>
+      </div>
+
+      <div class="guarantee-grid">
+        <div class="guarantee-item reveal">
+          <span class="num">01</span>
+          <h3>Devis fixe et détaillé</h3>
+          <p>Ligne par ligne, sans poste « imprévus » fourre-tout. Le prix ne bouge que si vous changez le projet — pas si on découvre un tuyau derrière le carrelage.</p>
+        </div>
+        <div class="guarantee-item reveal">
+          <span class="num">02</span>
+          <h3>Un seul interlocuteur</h3>
+          <p>Le conducteur de travaux qui chiffre votre projet est celui qui le suit jusqu'à la réception. Vous ne recommencez pas l'histoire à chaque appel.</p>
+        </div>
+        <div class="guarantee-item reveal">
+          <span class="num">03</span>
+          <h3>Compagnons salariés</h3>
+          <p>Les personnes qui interviennent chez vous sont celles qui ont établi le devis — pas une équipe sous-traitée découverte le jour J.</p>
+        </div>
+        <div class="guarantee-item reveal">
+          <span class="num">04</span>
+          <h3>Chantier protégé chaque jour</h3>
+          <p>Bâchage et protections posés dès le premier jour, pas juste avant la photo finale. Sols et accès nettoyés chaque soir.</p>
+        </div>
+      </div>
+
+      <div class="founder-note reveal">
+        <div class="sig">JV</div>
+        <div>
+          <p>« Construct Corp est né en 2009, après huit ans passés comme conducteur de travaux chez un promoteur lyonnais. J'en ai gardé une conviction : la plupart des chantiers qui tournent mal, ce n'est pas un problème de compétence technique, c'est un problème d'organisation et de communication. L'entreprise est construite autour de cette idée, pas autour d'un logo. »</p>
+          <cite>Julien Vasseur — Fondateur, Construct Corp</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Nos savoir-faire</span>
+          <h2 style="margin-top:14px;">Six métiers, une seule équipe</h2>
+        </div>
+        <p class="lede">Cliquez sur un métier pour voir ce qui est réellement inclus — pas une liste de mots-clés, un vrai périmètre de chantier.</p>
+      </div>
+
+      <div class="services-body">
+        <div class="service-list" role="tablist" id="serviceList"></div>
+        <div class="service-panel" id="servicePanel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Méthode</span>
+          <h2 style="margin-top:14px;">Comment se passe un chantier</h2>
+        </div>
+        <p class="lede">Le même déroulé depuis 2009, qu'il s'agisse d'une salle de bain de 5 m² ou d'une extension de 40 m².</p>
+      </div>
+
+      <div class="process-rail">
+        <div class="process-step reveal">
+          <span class="step-num">01</span>
+          <h3>Visite technique</h3>
+          <p>Un conducteur de travaux se déplace sous 48 h, mesure et pose les questions qui font gagner du temps ensuite — accès, réseaux existants, copropriété.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">02</span>
+          <h3>Devis fixe sous 5 jours</h3>
+          <p>Chiffrage ligne par ligne, matériaux et main-d'œuvre séparés. Vous savez exactement ce que vous payez, et pourquoi.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">03</span>
+          <h3>Chantier planifié</h3>
+          <p>Un planning partagé, mis à jour chaque semaine. Vous savez qui vient, quel jour, et ce qui a été fait la veille.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="step-num">04</span>
+          <h3>Réception &amp; suivi</h3>
+          <p>Liste de réserves signée à la remise des clés, levée sous 15 jours. On revient — sans qu'il faille relancer trois fois.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SHOWCASE ============ -->
+  <section id="work" class="showcase">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Réalisations</span>
+          <h2 style="margin-top:14px;">Des chantiers, pas des rendus 3D</h2>
+        </div>
+        <p class="lede">Chaque fiche vient du carnet de chantier réel — commune, surface, durée. Filtrez par type de projet.</p>
+      </div>
+
+      <div class="filter-row" id="filterRow">
+        <button class="chip is-active" data-filter="tout">Tout</button>
+        <button class="chip" data-filter="salle-de-bain">Salle de bain</button>
+        <button class="chip" data-filter="cuisine">Cuisine</button>
+        <button class="chip" data-filter="extension">Extension</button>
+        <button class="chip" data-filter="facade">Façade &amp; extérieur</button>
+        <button class="chip" data-filter="combles">Combles</button>
+        <button class="chip" data-filter="renovation-complete">Rénovation complète</button>
+      </div>
+
+      <div class="project-grid" id="projectGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="testimonials-head">
+        <div>
+          <span class="eyebrow">Avis clients</span>
+          <h2 style="margin-top:14px;">Ce qu'en disent les gens chez qui on a travaillé</h2>
+        </div>
+        <div style="display:flex; align-items:center; gap:26px; flex-wrap:wrap;">
+          <div class="rating-summary">
+            <span class="score">4,8</span>
+            <div>
+              <div style="color:var(--orange); display:flex; gap:2px; margin-bottom:4px;">★★★★★</div>
+              <span class="count">127 avis vérifiés</span>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prevTestimonial" aria-label="Avis précédent">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 6l-6 6 6 6"/></svg>
+            </button>
+            <button class="carousel-btn" id="nextTestimonial" aria-label="Avis suivant">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-track" id="testimonialTrack"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT / WIZARD ============ -->
+  <section id="contact" class="contact-section">
+    <div class="wrap contact-grid">
+      <div class="contact-intro reveal">
+        <span class="eyebrow" style="color:var(--orange);">Devis gratuit</span>
+        <h2 style="color:var(--white); margin-top:14px;">Parlons de votre projet</h2>
+        <p class="lede">Quatre clics pour cadrer votre demande, puis un conducteur de travaux vous rappelle pour fixer la visite technique. Pas de formulaire à rallonge.</p>
+
+        <div class="contact-facts">
+          <div class="fact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2.3z"/></svg>
+            <span>04 78 00 00 00 — du lundi au vendredi, 8h–18h</span>
+          </div>
+          <div class="fact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+            <span>contact@construct-corp.fr — réponse sous 24 h ouvrées</span>
+          </div>
+          <div class="fact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.4 7-12.6A7 7 0 0 0 5 9.4C5 14.6 12 22 12 22z"/><circle cx="12" cy="9" r="2.6"/></svg>
+            <span>Atelier au 14 rue des Tanneurs, 69004 Lyon</span>
+          </div>
+        </div>
+
+        <div class="zone-tags" style="margin-top:28px;">
+          <span>Lyon</span><span>Villeurbanne</span><span>Caluire</span><span>Vénissieux</span><span>Bron</span><span>Oullins</span><span>Écully</span><span>Saint-Priest</span>
+        </div>
+      </div>
+
+      <div class="wizard reveal" id="wizard">
+        <div class="wizard-progress">
+          <div class="bar"><span id="wizardBar"></span></div>
+          <span class="step-label" id="wizardLabel">Étape 1 / 5</span>
+        </div>
+
+        <div class="wizard-stage" id="wizardStage">
+
+          <div class="wizard-step is-active" data-step="1">
+            <h3>Quel est votre projet ?</h3>
+            <p class="hint">Vous préciserez les détails avec le conducteur de travaux.</p>
+            <div class="option-grid" data-group="project">
+              <button class="option-card" data-value="Salle de bain">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2z"/><path d="M6 12V6a2 2 0 0 1 2-2"/><path d="M18 7l2 2"/></svg>
+                <span class="oc-label">Salle de bain</span>
+                <span class="oc-sub">Douche, baignoire, PMR</span>
+              </button>
+              <button class="option-card" data-value="Cuisine">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h16"/><path d="M6 8V5a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3"/><path d="M4 8v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V8"/></svg>
+                <span class="oc-label">Cuisine</span>
+                <span class="oc-sub">Ouverte, agencement</span>
+              </button>
+              <button class="option-card" data-value="Extension">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21V10l6-5 6 5v11"/><path d="M15 21v-7h6v7"/></svg>
+                <span class="oc-label">Extension</span>
+                <span class="oc-sub">Ossature bois, véranda</span>
+              </button>
+              <button class="option-card" data-value="Façade & isolation">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16"/><path d="M4 10h16M10 4v16"/></svg>
+                <span class="oc-label">Façade &amp; isolation</span>
+                <span class="oc-sub">Ravalement, ITE</span>
+              </button>
+              <button class="option-card" data-value="Rénovation complète">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18"/><path d="M3 12h18M12 3v18"/></svg>
+                <span class="oc-label">Rénovation complète</span>
+                <span class="oc-sub">Appartement, maison</span>
+              </button>
+              <button class="option-card" data-value="Combles">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-8 9 8"/><path d="M6 11v9h12v-9"/></svg>
+                <span class="oc-label">Combles</span>
+                <span class="oc-sub">Chambre, fenêtre de toit</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="wizard-step" data-step="2">
+            <h3>Quelle est l'ampleur des travaux ?</h3>
+            <p class="hint">Une estimation suffit, on affine ensuite ensemble.</p>
+            <div class="option-grid" data-group="scope">
+              <button class="option-card" data-value="Quelques finitions">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20l9-9-4-4-9 9v4h4z"/></svg>
+                <span class="oc-label">Quelques finitions</span>
+              </button>
+              <button class="option-card" data-value="Rénovation partielle">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+                <span class="oc-label">Rénovation partielle</span>
+              </button>
+              <button class="option-card" data-value="Rénovation complète de la pièce ou du logement">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18"/></svg>
+                <span class="oc-label">Rénovation complète</span>
+              </button>
+              <button class="option-card" data-value="Construction ou extension neuve">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 12h20"/></svg>
+                <span class="oc-label">Construction neuve</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="wizard-step" data-step="3">
+            <h3>Vous pensez démarrer quand ?</h3>
+            <p class="hint">Ça nous aide à caler la visite technique.</p>
+            <div class="option-grid" data-group="timeline">
+              <button class="option-card" data-value="Dès que possible">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                <span class="oc-label">Dès que possible</span>
+              </button>
+              <button class="option-card" data-value="Dans les 3 mois">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+                <span class="oc-label">Dans les 3 mois</span>
+              </button>
+              <button class="option-card" data-value="Dans les 6 mois">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M7 15h3M14 15h3"/></svg>
+                <span class="oc-label">Dans les 6 mois</span>
+              </button>
+              <button class="option-card" data-value="Je me renseigne, pas pressé">
+                <svg class="oc-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.7 2.2c-.9.5-1.2 1-1.2 1.8"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></svg>
+                <span class="oc-label">Pas pressé</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="wizard-step" data-step="4">
+            <h3>Quel budget avez-vous prévu ?</h3>
+            <p class="hint">Une fourchette suffit pour cadrer le premier échange.</p>
+            <div class="option-grid" data-group="budget">
+              <button class="option-card" data-value="Moins de 10 000 €">
+                <span class="oc-label">Moins de 10 000 €</span>
+              </button>
+              <button class="option-card" data-value="10 000 – 30 000 €">
+                <span class="oc-label">10 000 – 30 000 €</span>
+              </button>
+              <button class="option-card" data-value="30 000 – 80 000 €">
+                <span class="oc-label">30 000 – 80 000 €</span>
+              </button>
+              <button class="option-card" data-value="Plus de 80 000 €">
+                <span class="oc-label">Plus de 80 000 €</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="wizard-step" data-step="5">
+            <h3>Comment vous recontacter ?</h3>
+            <p class="hint">Dernière étape — vérifiez votre demande ci-dessous.</p>
+            <div class="wizard-summary" id="wizardSummary"></div>
+            <div class="field-row">
+              <div class="field">
+                <label for="fName">Nom complet</label>
+                <input type="text" id="fName" placeholder="Camille Reynaud">
+              </div>
+              <div class="field">
+                <label for="fPhone">Téléphone</label>
+                <input type="tel" id="fPhone" placeholder="06 00 00 00 00">
+              </div>
+              <div class="field">
+                <label for="fEmail">E-mail</label>
+                <input type="email" id="fEmail" placeholder="vous@exemple.fr">
+              </div>
+              <div class="field">
+                <label for="fZip">Code postal du chantier</label>
+                <input type="text" id="fZip" placeholder="69003">
+              </div>
+            </div>
+            <button class="btn btn-primary" id="wizardSubmit" style="width:100%; justify-content:center; margin-top:6px;">
+              Envoyer ma demande de devis
+              <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+
+          <div class="wizard-success" id="wizardSuccess" style="display:none;">
+            <div class="check">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <h3>Demande envoyée</h3>
+            <p id="wizardSuccessText">Un conducteur de travaux vous rappelle sous 24 h ouvrées.</p>
+            <button class="btn btn-ghost" id="wizardReset">Faire une nouvelle simulation</button>
+          </div>
+
+        </div>
+
+        <div class="wizard-nav">
+          <button class="btn-back" id="wizardBack">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+            Retour
+          </button>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <svg class="mark" viewBox="0 0 34 34" fill="none">
+            <rect width="34" height="34" rx="9"/>
+            <path d="M10 24V10h7" stroke="#14110d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 24h7v-8" stroke="#14110d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Construct Corp
+        </a>
+        <p>Entreprise générale de rénovation fondée en 2009 à Lyon. Salles de bain, cuisines, extensions, façades et rénovations complètes.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Réalisations</a></li>
+          <li><a href="#reviews">Avis clients</a></li>
+          <li><a href="#contact">Devis gratuit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:0478000000">04 78 00 00 00</a></li>
+          <li><a href="mailto:contact@construct-corp.fr">contact@construct-corp.fr</a></li>
+          <li><p>14 rue des Tanneurs<br>69004 Lyon</p></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Zones d'intervention</h4>
+        <div class="zone-tags">
+          <span>Lyon</span><span>Villeurbanne</span><span>Caluire</span><span>Vénissieux</span><span>Bron</span><span>Oullins</span><span>Écully</span><span>Saint-Priest</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Construct Corp — SAS au capital de 10 000 € — SIRET 000 000 000 00000</span>
+      <span>Site de démonstration — Construct Corp est une entreprise fictive</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/vendor/DrawSVGPlugin.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
